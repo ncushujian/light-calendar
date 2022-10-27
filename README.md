@@ -1,4 +1,4 @@
-# calendar
+# light-calendar
 > 一个通用的轻量的js日历生成库。不涉及任何样式，日历的样式完全交给调用者实现。
 
 **[Demo示例](https://ncushujian.github.io/light-calendar/demo/dist/test.html)**      
