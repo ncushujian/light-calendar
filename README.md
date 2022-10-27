@@ -6,13 +6,13 @@
 
 ## 安装
 ```bash
-npm install light-calenda --save
+npm install light-calendar --save
 ```
 
 ## 使用方式
 ### 方式一
 ```javascript
-import calendar from 'light-calenda';
+import calendar from 'light-calendar';
 
 calendar.getWeekCalendar(2022, 10, 10, 'after');
 var monthCalendar = calendar.getMonthCalendar(2022, 10, 'after');
