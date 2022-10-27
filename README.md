@@ -1,7 +1,7 @@
 # calendar
 > 一个通用的轻量的js日历生成库。不涉及任何样式，日历的样式完全交给调用者实现。
 
-**[Demo示例](https://ncushujian.github.io/dialog/demo/dist/test.html)**      
+**[Demo示例](https://ncushujian.github.io/light-calendar/demo/dist/test.html)**      
 **[github](https://github.com/ncushujian/light-calendar)**
 
 ## 安装
@@ -36,7 +36,8 @@ var monthCalendar = calendar.getMonthCalendar(2022, 10, 'after');
 
 ### 方式二
 ```html
-<script src="https://itg-static.oss-cn-shanghai-finance-1-pub.aliyuncs.com/common/js/calendar-1.0.0.js"></script>
+<!-- script标签引入 calendar.min.js ，该 js 文件位于 /dist 文件目录下 -->
+<script src="https://xxx.xxx.com/xxx/xxx/calendar.min.js"></script>
 <script>
   tCalendar.getWeekCalendar(2022, 10, 10, 'after');
   tCalendar.getMonthCalendar(2022, 10, 'after');

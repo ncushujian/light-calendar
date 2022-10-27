@@ -5,7 +5,7 @@ export default {
   output: [
     {
       name: 'tCalendar',
-      file: './dist/calendar.js',
+      file: './dist/calendar.min.js',
       format: 'iife'
     },
     {
