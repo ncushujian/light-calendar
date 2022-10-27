@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>calendar</title>
+  <style>
+    html, body {
+      padding: 0;
+      margin: 0;
+      height: 100%;
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .week-calendar {
+      margin: 30px auto 60px;
+    }
+    .time {
+      font-size: 16px;
+      text-align: center;
+    }
+    .header {
+      margin-bottom: 12px;
+      width: 420px;
+      display: flex;
+    }
+    .header .day {
+      width: 60px;
+      font-size: 14px;
+      font-weight: bolder;
+      text-align: center;
+    }
+    .date-list {
+      width: 420px;
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .date-list .date {
+      position: relative;
+      width: 60px;
+      height: 60px;
+      color: #666;
+      font-size: 14px;
+      line-height: 60px;
+      text-align: center;
+    }
+    .date-list .date.current {
+      color: #fff;
+    }
+    .date-list .date.current::after {
+      content: '';
+      position: absolute;
+      left: 10px;
+      top: 10px;
+      z-index: -1;
+      width: 40px;
+      height: 40px;
+      border-radius: 30px;
+      background-color: rgb(33, 150, 243);
+    }
+    .date-list .date.gray {
+      color: #ccc;
+    }
+    .month-calendar {
+      position: relative;
+    }
+    .prev-month, .next-month {
+      position: absolute;
+      top: 200px;
+      width: 60px;
+      height: 60px;
+      outline: none;
+      border: 0;
+      background: url(https://itg-static.oss-cn-shanghai-finance-1-pub.aliyuncs.com/common/img/arrow.png) center/contain no-repeat;
+      background-color: transparent;
+    }
+    .prev-month {
+      left: -70px;
+    }
+    .next-month {
+      right: -70px;
+      transform: rotateZ(180deg);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- 周日历 -->
+    <div class="week-calendar">
+      <p class="time" id="j_weekTime"></p>
+      <div class="header">
+        <div class="day">一</div>
+        <div class="day">二</div>
+        <div class="day">三</div>
+        <div class="day">四</div>
+        <div class="day">五</div>
+        <div class="day">六</div>
+        <div class="day">日</div>
+      </div>
+      <div class="date-list" id="j_weekDateList"></div>
+    </div>
+    <!-- 月日历 -->
+    <div class="month-calendar">
+      <p class="time" id="j_monthTime"></p>
+      <button class="prev-month" id="j_prevMonthBtn"></button>
+      <button class="next-month" id="j_nextMonthBtn"></button>
+      <div class="header">
+        <div class="day">一</div>
+        <div class="day">二</div>
+        <div class="day">三</div>
+        <div class="day">四</div>
+        <div class="day">五</div>
+        <div class="day">六</div>
+        <div class="day">日</div>
+      </div>
+      <div class="date-list" id="j_monthDateList"></div>
+    </div>
+  </div>
+</body>
+</html>
